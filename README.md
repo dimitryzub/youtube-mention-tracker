@@ -10,15 +10,6 @@ and you want understand what's the new framework is, this is what this demo app 
 Another example is a keyword like "bad `company-name` service".
 This is direct feedback from a customer on which the company can reflect.
 
-## Video Example
-
-https://user-images.githubusercontent.com/78694043/210506842-bdf91d41-a9ad-4c1e-bac1-c2d871bcf597.mp4
-
-
-This is how transcribed results (if any) would look like:
-
-![transcribed-results](https://user-images.githubusercontent.com/78694043/210507490-37e2e799-842f-4a54-a189-d34b022bd23e.png)
-
 ## Usage 
 
 Clone repository:
@@ -33,12 +24,6 @@ Install dependencies:
 $ cd youtube-mention-tracker && pip install -r requriements.txt
 ```
 
-Install `whisper` (transcription) separately, don't installed properly from `requriements.txt`:
-
-``` bash
-$ pip install git+https://github.com/openai/whisper.git
-```
-
 Add [SerpApi api key](https://serpapi.com/manage-api-key) for current shell and all processes started from current shell:
 
 ```bash
@@ -51,5 +36,15 @@ Run the app:
 ```bash
 $ cd youtube-tracker && streamlit run tracker.py
 ```
+
+## Video Example
+
+https://user-images.githubusercontent.com/78694043/210506842-bdf91d41-a9ad-4c1e-bac1-c2d871bcf597.mp4
+
+
+This is how transcribed results (if any) would look like:
+
+![transcribed-results](https://user-images.githubusercontent.com/78694043/210507490-37e2e799-842f-4a54-a189-d34b022bd23e.png)
+
 
 <p align="center";>Sponsored by <a href="https://serpapi.com/">SerpApi</a> 🧡</p>
