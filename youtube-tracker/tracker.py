@@ -22,6 +22,8 @@ Things to improve:
 5. Remove code duplication. Like creating centered button, SAVE_OPTION conditions (lines 258-311)
 '''
 
+import subprocess
+
 # installs whisper separately, don't properly installs from requirements.txt
 subprocess.call(['pip', 'install', 'git+https://github.com/openai/whisper.git'])
 
@@ -32,7 +34,7 @@ import pytube.exceptions as exceptions
 from queue import Queue
 import streamlit as st
 import whisper
-import re, os, time, subprocess
+import re, os, time
 import pathlib
 from stqdm import stqdm
 import math, base64
