@@ -7,7 +7,7 @@ The main idea is taken from a great tool called [Mention](https://mention.com/en
 If you want to track someone said certain keywords like "Serp Api" or "new javascript framework"
 and you want understand what's the new framework is, this is what this demo app will do. 
 
-Another example is a keyword like "bad <company-name> service".
+Another example is a keyword like "bad `company-name` service".
 This is direct feedback from a customer on which the company can reflect.
 
 ## Video Example
@@ -33,9 +33,16 @@ Install dependencies:
 $ cd youtube-mention-tracker && pip install -r requriements.txt
 ```
 
+Add [SerpApi api key](https://serpapi.com/manage-api-key) for current shell and all processes started from current shell:
+
+```bash
+# used to parse youtube videos, has a plan of 100 free searches
+$ export SERPAPI_API_KEY=<your-api-key>
+```
+
 Run the app:
 
-```
+```bash
 $ cd youtube-tracker && streamlit run tracker.py
 ```
 
