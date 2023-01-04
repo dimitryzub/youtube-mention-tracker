@@ -33,6 +33,12 @@ Install dependencies:
 $ cd youtube-mention-tracker && pip install -r requriements.txt
 ```
 
+Install `whisper` (transcription) separately, don't installed properly from `requriements.txt`:
+
+``` bash
+$ pip install git+https://github.com/openai/whisper.git
+```
+
 Add [SerpApi api key](https://serpapi.com/manage-api-key) for current shell and all processes started from current shell:
 
 ```bash
@@ -45,7 +51,5 @@ Run the app:
 ```bash
 $ cd youtube-tracker && streamlit run tracker.py
 ```
-
-
 
 <p align="center";>Sponsored by <a href="https://serpapi.com/">SerpApi</a> 🧡</p>
