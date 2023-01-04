@@ -84,7 +84,7 @@ def main():
     SEARCH_QUERY: str = st.text_input(label='Search query', placeholder='Data Nerd', help='Multiple search queries is not supported')      # used to parsing youtube videos
     TARGET_KEYWORD: str = st.text_input(label='Target keyword', placeholder='SQL', help='Multiple target keywords is not supported')  # used for in the speech recognition
     NUMBER_OF_VIDEOS_TO_ANALYZE: int = st.slider(label='Number of videos to analyze', min_value=1, max_value=20, help='By default, extracted videos will be no longer than 20 minutes. Its done by filtering YouTube results with [`sp`](https://serpapi.com/youtube-search-api#api-parameters-advanced-youtube-parameters-sp) URL parameter.')
-    SAVE_OPTION = st.selectbox(label='Choose file format to save', options=(None, 'CSV'), help='By default data wont be saved. Choose CSV or JSON format if you want to save the results.')
+    SAVE_OPTION = st.selectbox(label='Choose file format to save', options=(None, 'CSV'), help='By default data wont be saved. Choose CSV format if you want to save the results to CSV file.')
     # PAGINATION = st.checkbox(label='Enable pagination') # increase amount of videos to parse
 
     # submit button
