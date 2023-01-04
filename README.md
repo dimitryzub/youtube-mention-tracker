@@ -14,6 +14,11 @@ This is direct feedback from a customer on which the company can reflect.
 
 https://user-images.githubusercontent.com/78694043/210506842-bdf91d41-a9ad-4c1e-bac1-c2d871bcf597.mp4
 
+
+This is how transcribed results (if any) would look like:
+
+![transcribed-results](https://user-images.githubusercontent.com/78694043/210507490-37e2e799-842f-4a54-a189-d34b022bd23e.png)
+
 ## Usage 
 
 Clone repository:
