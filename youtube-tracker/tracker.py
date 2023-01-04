@@ -137,8 +137,16 @@ def main():
                     for video_result in search_archived.get('video_results', []):
                         if video_result.get('title') not in videos:
                             # can't contain emojies in the file name
-                            title = video_result.get('title').replace("|", "").replace("/", "").replace("?", "").replace(":", "").replace("<", "").replace(">", "").replace("\\", "").replace('"', "").replace("*", "")
-                            
+                            title = video_result.get('title') \
+                                .replace('|', '')\
+                                .replace('/', '')\
+                                .replace('?', '')\
+                                .replace(':', '')\
+                                .replace('<', '')\
+                                .replace('>', '')\
+                                .replace('\\','')\
+                                .replace('', '') \
+                                .replace('*', '')
                             videos.append({
                                 'title': title,
                                 'link': video_result.get('link'),
@@ -183,16 +191,7 @@ def main():
                             .download(
                                 output_path=VIDEOS_DOWNLOAD_PATH,
                                 filename=video['file_path']
-                                .replace('|', '')
-                                .replace('/', '')
-                                .replace('?', '')
-                                .replace(':', '')
-                                .replace('<', '')
-                                .replace('>', '')
-                                .replace('\\','')
-                                .replace('', '')
-                                .replace('*', '')
-                            )
+                                )
                     except exceptions.LiveStreamError: 
                         print(f"Video {video['link']} is a livestream, couldn't download.")
                         pass
