@@ -50,7 +50,6 @@ if not VIDEOS_DOWNLOAD_PATH.exists():
     subprocess.run(['rm', '-r', 'videos/'])
     subprocess.run(['mkdir', 'videos/'])
 
-print(list(pathlib.Path().rglob('*.*')))
 
 def main():
     # TODO: add a blog post link to "SerpApi Demo Project"
@@ -149,10 +148,14 @@ def main():
                                 .replace('\\','')\
                                 .replace('', '') \
                                 .replace('*', '')
+                                
+                            absolute_title_path = pathlib.Path(title).absolute()
+                            print(absolute_title_path)
+                            
                             videos.append({
                                 'title': title,
                                 'link': video_result.get('link'),
-                                'file_path': f"{title}.mp4"
+                                'file_path': f"{absolute_title_path}.mp4"
                             })
                             
                         if len(videos) == NUMBER_OF_VIDEOS_TO_ANALYZE:
