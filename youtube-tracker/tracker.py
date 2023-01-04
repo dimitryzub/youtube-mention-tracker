@@ -217,7 +217,7 @@ def main():
                 model = whisper.load_model('base')
 
                 for video in videos:
-                    mp4_file_path = f'./videos/{video["file_path"].replace("|", "")}'
+                    mp4_file_path = f'~/youtube-mention-tracker/videos/{video["file_path"]}'
                     transcribed_audio = model.transcribe(mp4_file_path, fp16=False)
 
                     # generic check to check if transcibe text is present to do further tasks
