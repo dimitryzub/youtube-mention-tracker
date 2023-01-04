@@ -34,7 +34,9 @@ import pathlib
 from stqdm import stqdm
 import math, base64
 import pandas as pd
+from dotenv import load_dotenv, find_dotenv
 
+load_dotenv(find_dotenv())
 
 VIDEOS_DOWNLOAD_PATH = pathlib.Path(__file__).parent.resolve() / 'videos' 
 
