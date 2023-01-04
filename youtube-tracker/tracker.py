@@ -49,7 +49,7 @@ if VIDEOS_DOWNLOAD_PATH.exists():
 if not VIDEOS_DOWNLOAD_PATH.exists():
     os.makedirs('videos', exist_ok=True)
 
-print(list(Path().rglob('*.*')))
+print(list(pathlib.Path().rglob('*.*')))
 
 
 def main():
