@@ -222,7 +222,6 @@ def main():
                 model = whisper.load_model('base')
 
                 for video in videos:
-                    # mp4_file_path = f'./videos/{video["file_path"]}'
                     transcribed_audio = model.transcribe(video["file_path"], fp16=False)
 
                     # generic check to check if transcibe text is present to do further tasks
