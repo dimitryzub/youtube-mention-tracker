@@ -25,7 +25,7 @@ Things to improve:
 import subprocess
 
 # installs whisper separately, don't properly installs from requirements.txt
-subprocess.call(['pip', 'install', 'git+https://github.com/openai/whisper.git'])
+subprocess.run(['pip', 'install', 'git+https://github.com/openai/whisper.git'])
 
 from urllib.parse import (parse_qsl, urlsplit)
 from serpapi import YoutubeSearch
