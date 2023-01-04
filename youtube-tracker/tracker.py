@@ -22,6 +22,9 @@ Things to improve:
 5. Remove code duplication. Like creating centered button, SAVE_OPTION conditions (lines 258-311)
 '''
 
+# installs whisper separately, don't properly installs from requirements.txt
+subprocess.call(['pip', 'install', 'git+https://github.com/openai/whisper.git'])
+
 from urllib.parse import (parse_qsl, urlsplit)
 from serpapi import YoutubeSearch
 from pytube import YouTube
@@ -36,8 +39,6 @@ import math, base64
 import pandas as pd
 from dotenv import load_dotenv, find_dotenv
 
-# installs whisper separately, don't properly installs from requirements.txt
-subprocess.call(['pip', 'install', 'git+https://github.com/openai/whisper.git'])
 
 load_dotenv(find_dotenv())
 
