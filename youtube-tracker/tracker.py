@@ -47,7 +47,7 @@ if VIDEOS_DOWNLOAD_PATH.exists():
 
 # create videos folder if not exist. Temporary store videos.
 if not VIDEOS_DOWNLOAD_PATH.exists():
-    subprocess.run(['rm', 'videos/'])
+    subprocess.run(['rm', '-r', 'videos/'])
     subprocess.run(['mkdir', 'videos/'])
 
 print(list(pathlib.Path().rglob('*.*')))
