@@ -64,7 +64,7 @@ def main():
                 }
             </style>
             <div class="footer">
-                <p align="center" style="padding-top: 200px;">SerpApi Demo Project (<a href="">repo</a>)<br>Made with <a href="https://streamlit.io/">Streamlit</a>, <a href="http://serpapi.com/">SerpApi</a>, <a href="https://github.com/pytube/pytube">PyTube</a>, <a href="https://github.com/openai/whisper">Whisper</a> 🧡</p>
+                <p align="center" style="padding-top: 200px;">SerpApi Demo Project (<a href="https://github.com/dimitryzub/youtube-mention-tracker">repo</a>)<br>Made with <a href="https://streamlit.io/">Streamlit</a>, <a href="http://serpapi.com/">SerpApi</a>, <a href="https://github.com/pytube/pytube">PyTube</a>, <a href="https://github.com/openai/whisper">Whisper</a> 🧡</p>
             </div>
     '''
     st.markdown(footer_modified, unsafe_allow_html=True) 
