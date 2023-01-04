@@ -47,10 +47,9 @@ if VIDEOS_DOWNLOAD_PATH.exists():
 
 # create videos folder if not exist. Temporary store videos.
 if not VIDEOS_DOWNLOAD_PATH.exists():
-    os.makedirs('videos', exist_ok=True)
+    subprocess.run(['mkdir', 'videos'])
 
 print(list(pathlib.Path().rglob('*.*')))
-
 
 def main():
     # TODO: add a blog post link to "SerpApi Demo Project"
