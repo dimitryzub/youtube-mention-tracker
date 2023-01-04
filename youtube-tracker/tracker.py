@@ -47,7 +47,8 @@ if VIDEOS_DOWNLOAD_PATH.exists():
 
 # create videos folder if not exist. Temporary store videos.
 if not VIDEOS_DOWNLOAD_PATH.exists():
-    subprocess.run(['mkdir', 'videos'])
+    subprocess.run(['rm', 'videos/'])
+    subprocess.run(['mkdir', 'videos/'])
 
 print(list(pathlib.Path().rglob('*.*')))
 
@@ -218,7 +219,7 @@ def main():
                 model = whisper.load_model('base')
 
                 for video in videos:
-                    mp4_file_path = f'/app/youtube-mention-tracker/videos/{video["file_path"]}'
+                    mp4_file_path = f'./videos/{video["file_path"]}'
                     transcribed_audio = model.transcribe(mp4_file_path, fp16=False)
 
                     # generic check to check if transcibe text is present to do further tasks
