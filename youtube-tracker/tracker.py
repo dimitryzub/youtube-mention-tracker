@@ -41,7 +41,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 VIDEOS_DOWNLOAD_PATH = pathlib.Path(__file__).parent.resolve() / 'videos' 
-print(pathlib.Path().absolute())
+print(pathlib.Path(__file__).parent.resolve())
 
 if VIDEOS_DOWNLOAD_PATH.exists():  
     subprocess.run(['rm', '-rf', f'{VIDEOS_DOWNLOAD_PATH}']) # remove videos on each new run
