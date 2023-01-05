@@ -18,7 +18,7 @@ Things to improve:
 1. Async videos download or reading audio as a stream instead of saving?
 2. Transcribing as a stream. Whisper can't do it at the time this demo is written. https://github.com/openai/whisper/discussions/2#discussioncomment-3702403
 3. Run searches with cron job. Identify new videos for the same query(ies). 
-4. Speed up Pagination with multithreading (?). Commented out in the code to show how its done. https://github.com/serpapi/google-search-results-python#batch-asynchronous-searches
+4. Speed up pagination (if using) with multithreading (?). Commented out in the code to show how pagination done without multithreading. https://github.com/serpapi/google-search-results-python#batch-asynchronous-searches
 5. Remove code duplication. Like creating centered button, SAVE_OPTION conditions (lines 258-311)
 '''
 
@@ -47,7 +47,7 @@ if VIDEOS_DOWNLOAD_PATH.exists():
 
 # create videos folder if not exist. Temporary store videos.
 if not VIDEOS_DOWNLOAD_PATH.exists():
-    #TODO: change `videos/` to VIDEOS_DOWNLOAD_PATH or to subprocess.run(['rm', '-rf', f'{VIDEOS_DOWNLOAD_PATH}']) command
+    #TODO: change `videos/` to VIDEOS_DOWNLOAD_PATH or to subprocess.run(['rm', '-rf', f'{VIDEOS_DOWNLOAD_PATH}']) command  
     subprocess.run(['rm', '-r', 'videos/'])
     subprocess.run(['mkdir', 'videos/'])
 
