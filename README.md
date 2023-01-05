@@ -1,16 +1,33 @@
 # YouTube Mention(s) Tracker
 
-<p align="center";><a href="https://dimitryzub-youtube-mention-tracke-youtube-trackertracker-qu7mh3.streamlit.app/">YouTube Videos Mention Tracker Demo</a></p>
+<p align="center";><a href="https://dimitryzub-youtube-mention-tracke-youtube-trackertracker-qu7mh3.streamlit.app/">Streamlit YouTube Videos Mention Tracker Demo</a></p>
 
 ## Purpose/Idea
 
-The main idea is taken from a great tool called [Mention](https://mention.com/en/). This demo shows the same idea but for YouTube videos only.
+The main idea is taken from a great tool called [Mention](https://mention.com/en/). This demo shows the same idea but for YouTube videos only by transcribing videos (even if the video without captions). 
 
-If you want to track someone said certain keywords like "Serp Api" or "new javascript framework"
-and you want understand what's the new framework is, this is what this demo app will do. 
+**Scenario**: user wants to track someone said certain keywords like "Serp Api". Or a query "switching from iphone to..." and target keyword like "poor" (for poor quality), or "No..." (no support for certain feature that android has) and similar keywords that may identify reasons of switching.
 
-Another example is a keyword like "bad `company-name` service".
-This is direct feedback from a customer on which the company can reflect.
+Another example is a certain search query in a company niche and a target keyword to look in those videos that may benefit company by getting more context out of it.
+
+<details>
+<summary>Things to improve</summary>
+
+    1. Async videos download or reading audio as a stream instead of saving?
+    2. Transcribing as a stream. Whisper can't do it at the time this demo is written. https://github.com/openai/whisper/discussions/2#discussioncomment-3702403
+    3. Run searches with cron job. Identify new videos for the same query(ies). 
+    4. Speed up pagination (if using) with multithreading (?). Commented out in the code to show how pagination done without multithreading. https://github.com/serpapi/google-search-results-python#batch-asynchronous-searches
+    5. Remove code duplication. Like creating centered button, SAVE_OPTION conditions (lines 258-311)
+</details> 
+
+## Video Example
+
+https://user-images.githubusercontent.com/78694043/210506842-bdf91d41-a9ad-4c1e-bac1-c2d871bcf597.mp4
+
+
+This is how transcribed results (if any) would look like:
+
+![transcribed-results](https://user-images.githubusercontent.com/78694043/210507490-37e2e799-842f-4a54-a189-d34b022bd23e.png)
 
 ## Usage
 
@@ -40,15 +57,5 @@ Run the app:
 ```bash
 $ cd youtube-tracker && streamlit run tracker.py
 ```
-
-## Video Example
-
-https://user-images.githubusercontent.com/78694043/210506842-bdf91d41-a9ad-4c1e-bac1-c2d871bcf597.mp4
-
-
-This is how transcribed results (if any) would look like:
-
-![transcribed-results](https://user-images.githubusercontent.com/78694043/210507490-37e2e799-842f-4a54-a189-d34b022bd23e.png)
-
 
 <p align="center";>Sponsored by <a href="https://serpapi.com/">SerpApi</a> 🧡</p>
