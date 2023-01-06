@@ -1,6 +1,6 @@
 # YouTube Mention(s) Tracker
 
-<p align="center";><a href="https://dimitryzub-youtube-mention-tracke-youtube-trackertracker-qu7mh3.streamlit.app/">Streamlit YouTube Videos Mention Tracker Demo</a></p>
+<p align="center";><a href="https://youtube-mentions-tracker.streamlit.app/">Streamlit YouTube Videos Mention Tracker Demo</a></p>
 
 ## Purpose/Idea
 
@@ -31,7 +31,7 @@ This is how transcribed results (if any) would look like:
 
 ## Usage
 
-This section if you want to use your own API key. [The demo on `streamlit`](https://dimitryzub-youtube-mention-tracke-youtube-trackertracker-qu7mh3.streamlit.app/) doesn't require you to use any API key.
+This section if you want to use your own API key. [The demo on `streamlit`](https://youtube-mentions-tracker.streamlit.app/) doesn't require you to use any API key.
 
 Clone repository:
 
