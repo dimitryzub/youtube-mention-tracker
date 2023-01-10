@@ -52,7 +52,6 @@ if not VIDEOS_DOWNLOAD_PATH.exists():
 
 
 def main():
-    # TODO: add a blog post link to "SerpApi Demo Project"
     footer_modified = '''
             <style>
                 #MainMenu {visibility: hidden;}
